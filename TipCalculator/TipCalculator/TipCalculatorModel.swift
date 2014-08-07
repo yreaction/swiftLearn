@@ -1,6 +1,6 @@
 //
-//  TipCalculator.swift
-//  TipCalculator
+//  TipCalculatorModel.swift
+//  TipCalculatorModel
 //
 //  Created by Juan Pedro Lozano on 31/07/14.
 //  Copyright (c) 2014 Juan Pedro Lozano. All rights reserved.
@@ -8,33 +8,40 @@
 
 import Foundation
 
-class TipCalculator {
+class TipCalculatorModel {
+    
     var total: Double
     var taxPct: Double
     var subtotal: Double {
-        get {
+    get {
         return total / (taxPct + 1)
-        }
+    }
     }
     
-    init(total:Double,taxPct:Double) {
-        self.total = total //self distiguis properties from arguments
+    init(total:Double, taxPct:Double) {
+        self.total = total
         self.taxPct = taxPct
     }
     
-    func calcTipWithTipPct (#tipPct: Double) -> Double {
-        return subtotal * tipPct
+    func calcTipWithTipPct(tipPct:Double) -> (tipAmt:Double, total:Double) {
+        let tipAmt = subtotal * tipPct
+        let finalTotal = total + tipAmt
+        return (tipAmt, finalTotal)
     }
-    //Funcion devuelve diccionario
     
-    func returnPossibleTips () -> [Int:Double] {
-        let possibleTips = [0.15,0.18,0.20]
-        var retVal = Dictionary<Int,Double>()
-        for i in 0..<possibleTips.count {
-            let incPct = Int(possibleTips[i] * 100)
-            retVal[incPct] = calcTipWithTipPct(tipPct: possibleTips[i])
+    func returnPossibleTips() -> [Int: (tipAmt:Double, total:Double)] {
+        
+        let possibleTipsInferred = [0.15, 0.18, 0.20]
+        let possibleTipsExplicit:[Double] = [0.15, 0.18, 0.20]
+        
+        var retval = Dictionary<Int, (tipAmt:Double, total:Double)>()
+        for possibleTip in possibleTipsInferred {
+            let intPct = Int(possibleTip*100)
+            retval[intPct] = calcTipWithTipPct(possibleTip)
         }
-        return retVal
+        return retval
+        
     }
     
 }
+

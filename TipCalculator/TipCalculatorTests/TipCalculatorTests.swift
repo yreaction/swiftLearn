@@ -1,6 +1,6 @@
 //
-//  TipCalculatorTests.swift
-//  TipCalculatorTests
+//  TipCalculatorModelTests.swift
+//  TipCalculatorModelTests
 //
 //  Created by Juan Pedro Lozano on 31/07/14.
 //  Copyright (c) 2014 Juan Pedro Lozano. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class TipCalculatorTests: XCTestCase {
+class TipCalculatorModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
