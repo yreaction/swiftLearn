@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="adaptativeWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="tsU-Cz-R93">
+                                <rect key="frame" x="150" y="20" width="300" height="197"/>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="150" y="20" width="300" height="160"/>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKw-12-s4Q" userLabel="TextContainer">
+                                <rect key="frame" x="0.0" y="237" width="600" height="363"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqm-zY-go1">
+                                        <rect key="frame" x="71" y="61.5" width="458.5" height="291.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="250"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="71" y="-102" width="458.5" height="291.5"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVK-vf-nhl">
+                                        <rect key="frame" x="-6.5" y="10" width="613" height="177"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="-7" y="10" width="613" height="177"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Nqm-zY-go1" secondAttribute="bottom" constant="10" id="Vk7-q8-Z5H"/>
+                                    <constraint firstItem="PVK-vf-nhl" firstAttribute="top" secondItem="MKw-12-s4Q" secondAttribute="top" constant="10" id="c9C-vR-S9n"/>
+                                    <constraint firstAttribute="centerX" secondItem="PVK-vf-nhl" secondAttribute="centerX" id="cmn-ra-enH"/>
+                                    <constraint firstAttribute="centerX" secondItem="Nqm-zY-go1" secondAttribute="centerX" id="o07-wP-qv1"/>
+                                </constraints>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38481426660000001" green="0.69412039020000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.29019607843137252" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MKw-12-s4Q" firstAttribute="top" secondItem="tsU-Cz-R93" secondAttribute="bottom" constant="20" id="5e1-gr-gRP"/>
+                            <constraint firstItem="tsU-Cz-R93" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="93Z-HE-cMa"/>
+                            <constraint firstAttribute="centerX" secondItem="tsU-Cz-R93" secondAttribute="centerX" id="Z2Z-2o-N4T"/>
+                            <constraint firstAttribute="trailing" secondItem="MKw-12-s4Q" secondAttribute="trailing" id="Zhn-MA-2Hh"/>
+                            <constraint firstItem="MKw-12-s4Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="foM-Bi-mbQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MKw-12-s4Q" secondAttribute="bottom" id="vPd-xW-1OH"/>
+                            <constraint firstItem="tsU-Cz-R93" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zqw-gz-H7C"/>
+                        </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="93Z-HE-cMa"/>
+                                <exclude reference="Z2Z-2o-N4T"/>
+                                <exclude reference="zqw-gz-H7C"/>
+                                <exclude reference="5e1-gr-gRP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Clouds" width="300" height="197"/>
+    </resources>
+</document>
